@@ -1,6 +1,5 @@
 import { customerLinks, quickLinks, socialLinks } from '@/data/footerdata'
 import Link from 'next/link'
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 
 export default function Footer() {

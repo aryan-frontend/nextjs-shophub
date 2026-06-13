@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa6'
 
 export default function ProductCard({ products }) {
   return (
-    <div className="hover:shadow-xl transition bg-white rounded-2xl shadow-md p-5 ">
+    <div className="hover:shadow-xl transition bg-white rounded-2xl shadow-md p-5 relative ">
       <img src={products.thumbnail} alt={products.title} />
       <h2 className='text-xl font-bold mb-3'>{products.title}</h2>
       <p>{products.description?.slice(0, 60)}...</p>
@@ -14,6 +14,7 @@ export default function ProductCard({ products }) {
         <span className='text-2xl text-blue-600 font-bold'>Rs. {products.price}</span>
         <button className='bg-blue-600 text-white p-3 rounded-2xl hover:bg-blue-700'>Add to Cart</button>
       </div>
+      <span className='p-2 bg-gray-300 rounded-2xl absolute right-2 top-1'>{products.category}</span>
     </div>
   )
 }
