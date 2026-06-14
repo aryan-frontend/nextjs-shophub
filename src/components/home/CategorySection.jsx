@@ -16,9 +16,9 @@ export default function CategorySection() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map((category) => (
+          {categories.map((category, idx) => (
             <button
-              key={category}
+              key={idx}
               type="button"
               className="flex min-h-24 w-full items-center justify-center rounded-xl bg-gray-800 px-6 text-xl font-bold text-white shadow-sm transition-colors hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
