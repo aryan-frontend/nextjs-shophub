@@ -24,7 +24,7 @@ export default function useProducts() {
         data = data.sort((a, b) => b.price - a.price);
       }
       if(sortOption === "Highest Rated"){
-        data = data.sort((a, b) => b.rating - b.rating);
+        data = data.sort((a, b) => b.rating - a.rating);
       }
       setProducts([...data])
     }

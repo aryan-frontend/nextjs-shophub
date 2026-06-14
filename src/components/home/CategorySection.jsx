@@ -19,7 +19,7 @@ export default function CategorySection() {
           {categories.map((category, idx) => (
             <button
               key={idx}
-              type="button"
+              type="submit"
               className="flex min-h-24 w-full items-center justify-center rounded-xl bg-gray-800 px-6 text-xl font-bold text-white shadow-sm transition-colors hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
               {category}
