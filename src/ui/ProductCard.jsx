@@ -1,8 +1,14 @@
+"use client"
+import { useCart } from '@/hooks/useCart'
 import Link from 'next/link'
 import React from 'react'
 import { FaStar } from 'react-icons/fa6'
+import { useSelector } from 'react-redux'
 
 export default function ProductCard({ products }) {
+  let cart = useSelector((mystore) => mystore.cartStore.cart);
+  let checkCartItem = cart.find((obj) => obj.id == products.id);
+  const { addToCartItem, removeCartItem } = useCart()
   return (
     <Link href={`/products/${products.id}`}>
       <div className="hover:shadow-xl transition bg-white rounded-2xl shadow-md p-5 relative ">
@@ -14,7 +20,14 @@ export default function ProductCard({ products }) {
         </span>
         <div className='flex items-center justify-between mt-5'>
           <span className='text-2xl text-blue-600 font-bold'>Rs. {products.price}</span>
-          <button className='bg-blue-600 text-white p-3 rounded-2xl hover:bg-blue-700'>Add to Cart</button>
+          {
+            checkCartItem
+              ?
+              <button className='bg-red-600 text-white p-3 rounded-2xl hover:bg-red-700' onClick={(e) => removeCartItem(e, products.id)}>Remove Cart</button>
+              :
+              <button className='bg-blue-600 text-white p-3 rounded-2xl hover:bg-blue-700' onClick={(e) => addToCartItem(e, products)}>Add to Cart</button>
+          }
+
         </div>
         <span className='p-2 bg-gray-300 rounded-2xl absolute right-2 top-1'>{products.category}</span>
       </div>

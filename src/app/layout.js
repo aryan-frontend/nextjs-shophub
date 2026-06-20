@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import ReduxProvider from "@/redux/ReduxProvider";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,9 +15,14 @@ export default function RootLayout({ children }) {
       className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
-        <Footer />
+
+        <ReduxProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ReduxProvider>
+
+
       </body>
 
     </html>
