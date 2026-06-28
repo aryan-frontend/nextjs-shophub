@@ -11,7 +11,7 @@ export default function Header() {
     <header className='flex items-center justify-between p-5 border-b border-gray-400 fixed w-full bg-white z-10'>
       <Link href={"/"} className='text-2xl font-bold'>Shophub</Link>
       <Nabvar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <button onClick={() => setIsOpen(!isOpen)} className='block lg:hidden'> {
+      <button onClick={() => setIsOpen(!isOpen)} className='block lg:hidden text-2xl'> {
         isOpen ? <RxCross2 /> : <IoMenu />
       }
       </button>

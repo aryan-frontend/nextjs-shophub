@@ -71,10 +71,10 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="relative border-t border-slate-700">
+            <div className="relative border-t border-slate-700" >
                 <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 text-lg text-white sm:flex-row sm:items-center sm:justify-between lg:px-8">
-                    <p>&copy; 2026 ShopHub. All rights reserved.</p>
-                    <div className="flex items-center gap-7 text-2xl text-slate-300">
+                    <p className='text-center'>&copy; 2026 ShopHub. All rights reserved.</p>
+                    <div className="flex items-center justify-center gap-7 text-2xl text-slate-300">
 
                         {socialLinks.map(({ icon: Icon, href }, idx) => (
                             <Link href={href} key={idx} aria-label="Facebook" className="transition hover:text-blue-400">

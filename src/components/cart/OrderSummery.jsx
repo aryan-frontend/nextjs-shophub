@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React from 'react'
 import { useSelector } from 'react-redux';
 
@@ -29,8 +30,8 @@ export default function OrderSummery() {
               <span className='font-bold text-xl'>Total</span>
               <span className='text-blue-600 text-xl font-bold'>Rs. {total.toFixed(2)} </span>
             </div>
-            <button className='w-full p-3 bg-blue-600 text-white font-bold rounded-xl'>Proceed to Checkout</button>
-            <button className='w-full p-3 rounded-xl mb-3 border-2 border-gray-500'>Continue Shopping</button>
+            <Link href={"/checkout"} className=' text-center w-full p-3 bg-blue-600 text-white font-bold rounded-xl'>Proceed to Checkout</Link>
+            <Link href={"/products"} className=' text-center w-full p-3 rounded-xl mb-3 border-2 border-gray-500'>Continue Shopping</Link>
           </div>
         </div>
   )

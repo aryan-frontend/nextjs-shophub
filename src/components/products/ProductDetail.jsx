@@ -3,12 +3,15 @@ import React from 'react'
 import { FaArrowLeft, FaCartArrowDown, FaHeart, FaShield, FaStar, FaTruck } from 'react-icons/fa6'
 import useProductDetail from '@/hooks/useProductDetail'
 import ProductCard from '@/ui/ProductCard'
+import Link from 'next/link'
+import { useCart } from '@/hooks/useCart'
 
 export default function ProductDetail({id}) {
+    const { addToCartItem } = useCart()
     const {product, relatedProducts} = useProductDetail(id)
     return (
         <div className='mt-30 px-6'>
-            <h2 className='cursor-pointer text-gray-700 hover:text-black font-medium'><FaArrowLeft /> Back</h2>
+            <Link href={"/products"} className='cursor-pointer text-gray-700 flex items-center gap-2 hover:text-black font-medium'><FaArrowLeft /> Back</Link>
             <div className=' shadow-2xl rounded-2xl p-10 my-10 flex md:flex-row flex-col gap-7 items-center'>
                 <div className='lg:w-[50%]'>
                     <img src={product?.thumbnail} alt={product?.title} className='rounded-2xl w-full object-cover' />
@@ -27,9 +30,9 @@ export default function ProductDetail({id}) {
                     <p className='font-bold text-3xl text-blue-500'>Rs. {product?.price}</p>
                     <p className='my-5'>{product?.description}</p>
                     <div className='mb-7 flex md:flex-row flex-col items-center gap-3'>
-                        <button className='bg-blue-500 text-xl py-2 px-10 text-white rounded-xl md:w-auto w-full flex items-center justify-center gap-5'><FaCartArrowDown />Add to Cart</button>
-                        <button className='bg-black  text-xl text-center py-2 px-15 text-white rounded-xl md:w-auto w-full'>Buy Now</button>
-                        <button className='md:w-auto w-full border-2 border-gray-400 rounded-xl p-2'><FaHeart /></button>
+                        <button className='bg-blue-500 text-xl py-2 px-10 text-white rounded-xl md:w-auto w-full flex items-center justify-center gap-5' onClick={(e) => addToCartItem(e)}><FaCartArrowDown />Add to Cart</button>
+                        <Link href={"/checkout"} className='bg-black  text-xl text-center py-2 px-15 text-white rounded-xl md:w-auto w-full'>Buy Now</Link>
+                        <button className='md:w-auto w-full flex justify-center border-2 border-gray-400 rounded-xl p-2'><FaHeart/></button>
                     </div>
                     <hr className='text-gray-200 mb-5' />
                     <p className='mb-5 flex items-center'><FaTruck className='mr-2' />Free shipping on orders over $50</p>
