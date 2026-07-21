@@ -30,7 +30,7 @@ export default function ProductDetail({id}) {
                     <p className='font-bold text-3xl text-blue-500'>Rs. {product?.price}</p>
                     <p className='my-5'>{product?.description}</p>
                     <div className='mb-7 flex md:flex-row flex-col items-center gap-3'>
-                        <button className='bg-blue-500 text-xl py-2 px-10 text-white rounded-xl md:w-auto w-full flex items-center justify-center gap-5' onClick={(e) => addToCartItem(e)}><FaCartArrowDown />Add to Cart</button>
+                        <button className='bg-blue-500 text-xl py-2 px-10 text-white rounded-xl md:w-auto w-full flex items-center justify-center gap-5' onClick={(e) => addToCartItem(e, product)}><FaCartArrowDown />Add to Cart</button>
                         <Link href={"/checkout"} className='bg-black  text-xl text-center py-2 px-15 text-white rounded-xl md:w-auto w-full'>Buy Now</Link>
                         <button className='md:w-auto w-full flex justify-center border-2 border-gray-400 rounded-xl p-2'><FaHeart/></button>
                     </div>
