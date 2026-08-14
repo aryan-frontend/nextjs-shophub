@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa'
 export default function ProductFilter({ category, selectCategory, setSelectCategory, sortOption, setSortOption, searchTerm, setSearchTerm }) {
 
     return (
-        <div className='p-6'>
+        <div className='p-6 dark:text-black'>
             <div className=' shadow-2xl bg-white p-6 rounded-xl md:sticky top-18'>
                 <span className='flex items-center gap-2 text-xl mb-6' ><CiFilter />Filter</span>
                 <div className='flex items-center border-2 border-gray-700 rounded-3xl p-1'>

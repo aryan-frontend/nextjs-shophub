@@ -10,7 +10,7 @@ export default function ProductCard({ products }) {
   let checkCartItem = cart.find((obj) => obj.id == products.id);
   const { addToCartItem, removeCartItem } = useCart()
   return (
-    <Link href={`/products/${products.id}`}>
+    <Link href={`/products/${products.id}`} className='dark:text-black'>
       <div className="hover:shadow-xl transition bg-white rounded-2xl shadow-md p-5 relative ">
         <img src={products.thumbnail} alt={products.title} />
         <h2 className='text-xl font-bold mb-3'>{products.title}</h2>

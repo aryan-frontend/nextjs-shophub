@@ -9,9 +9,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <header className='flex items-center justify-between p-5 border-b border-gray-400 fixed w-full bg-white z-10'>
-      <Link href={"/"} className='text-2xl font-bold'>Shophub</Link>
+      <Link href={"/"} className='text-2xl dark:text-black font-bold'>Shophub</Link>
       <Nabvar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <button onClick={() => setIsOpen(!isOpen)} className='block lg:hidden text-2xl'> {
+      <button onClick={() => setIsOpen(!isOpen)} className='block lg:hidden text-2xl dark:text-black'> {
         isOpen ? <RxCross2 /> : <IoMenu />
       }
       </button>

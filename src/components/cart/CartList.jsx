@@ -7,7 +7,7 @@ export default function CartList() {
     let cart = useSelector((mystore) => mystore.cartStore.cart);
 
     return (
-        <div className='lg:w-[70%] w-full'>
+        <div className='lg:w-[70%] w-full dark:bg-white'>
             {
                 cart.length > 0
                     ?

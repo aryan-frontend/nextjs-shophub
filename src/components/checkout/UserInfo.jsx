@@ -4,7 +4,7 @@ import { FaWallet } from 'react-icons/fa6'
 
 export default function UserInfo() {
   return (
-    <form action="" className='pb-20 w-full md:w-[70%]'>
+    <form action="" className='pb-20 w-full md:w-[70%] dark:text-black dark:bg-white'>
 
       <div className='p-5 mb-10 bg-white rounded-2xl shadow-xl '>
         <h2 className='text-2xl font-bold mb-5'>Contact Information</h2>

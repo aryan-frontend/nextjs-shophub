@@ -15,7 +15,7 @@ export default function CheckOrderSummery() {
         alert("Your Order Placed Successfully");
     }
     return (
-        <div className='lg:w-[30%] w-full shadow-xl rounded-2xl md:p-5 p-1 mb-10 h-fit self-start sticky top-18'>
+        <div className='lg:w-[30%] w-full shadow-xl rounded-2xl md:p-5 p-1 mb-10 h-fit self-start  dark:text-black dark:bg-white'>
             <h3 className='font-bold mb-5 md:text-2xl text-xl md:text-start text-center'>Order Summary</h3>
             {
                 cart.map((items, idx) => (

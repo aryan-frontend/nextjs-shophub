@@ -5,7 +5,7 @@ import { FaMinus, FaPlus, FaTrash } from "react-icons/fa6"
 export default function CartItem({cartObject}) {
   const { removeCartItem, changeItemQty } = useCart()
   return (
-    <div className='shadow-2xl rounded-2xl p-5 my-10 md:flex gap-7 items-center'>
+    <div className='shadow-2xl rounded-2xl p-5 my-10 md:flex gap-7 items-center dark:bg-white dark:text-black'>
 
       <div className='h-30 md:w-30 w-full shrink-0'>
         <img src={cartObject.img} className='rounded-2xl h-full w-full object-cover' />
